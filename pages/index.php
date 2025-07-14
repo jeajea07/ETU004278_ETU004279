@@ -5,15 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Connexion - Viby</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Ton style personnalisé -->
   <link rel="stylesheet" href="../assets/CSS/style.css" />
 </head>
 <body class="bg-light">
 
-  <!-- Barre de navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container d-flex align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="#">
@@ -23,10 +20,8 @@
     </div>
   </nav>
 
-  <!-- Contenu principal -->
   <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
-      <!-- Formulaire -->
       <div class="col-md-6">
         <div class="card shadow">
           <div class="card-body">
@@ -55,7 +50,7 @@
 
             <p class="text-center mt-3">
               Besoin d'un compte ?
-              <a href="model.php?page=inscription" class="text-decoration-none text-primary fw-semibold">S'inscrire</a>
+              <a href="inscription.php" class="text-decoration-none text-primary fw-semibold">S'inscrire</a>
             </p>
           </div>
         </div>

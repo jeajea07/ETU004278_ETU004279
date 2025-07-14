@@ -1,0 +1,344 @@
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top right, #3b1fa2, #1c1d8f, #06071c);
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+tbody{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*ENTETE*/
+.tete{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+
+/*BARRE DE NAVIGATION*/
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+} 
+
+nav .logo{
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    position: relative;
+}
+
+nav li a {
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+nav li:hover > a {
+    background-color: #f38ea8;
+    color: white;
+}
+
+/* Déconnexion */
+.inscription {
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.inscription a {
+    color: #1c1d8f;
+    font-weight: bold;
+}
+
+/*Page Login*/
+.contenu{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Formulaire Login et Inscription*/
+.formulaire{
+    box-shadow: 0px 0px 20px 3px rgb(66, 115, 250);
+    width: 25%;
+    border-radius: 3%;
+    padding: 3%;
+    background-color: #010111;
+    
+}
+
+.formulaire p{
+    color: white;
+    font-weight: bold;
+}
+
+.formulaire h1{
+    color: rgb(66, 115, 250);
+}
+
+.champ{
+    height: 50px;
+    border: 1px solid rgb(66, 115, 250);
+    border-radius: 3%;
+    width: 85%;
+    margin-left: 3%;
+    padding-left: 3%;
+    color: white;
+    background-color: #333;
+}
+
+/*Bouton Connexion Login*/
+#connexion{
+    background-color: rgb(66, 115, 250);
+    border: 2px solid rgb(66, 115, 250);
+    width: 50%;
+    color: white;
+    height: 30px;
+    border-radius: 3%;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 25%;
+    
+}
+
+/*Bouton incription Inscription*/
+#inscription{
+    color: rgb(66, 115, 250);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+
+/*ACCUEIL*/
+.affichage{
+    display: flex;
+    justify-content: space-between;
+}
+/*Contenair*/
+.container {
+    margin-top: 50px;
+    border-radius: 8px;
+    width: 50%;
+}
+
+
+/* Section de champ publication */
+.publication h1 {
+    color: rgb(66, 115, 250);
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#formpub {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 50px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    height: 100px;
+}
+
+#pub {
+    background-color: #0066cc;
+    margin-right: 50px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+#pub:hover {
+    background-color: #004999;
+}
+
+/* Affichage Publication */
+.pub {
+    width: 90%;
+    margin: 50px 50px;
+}
+
+.idpub {
+    display: flex;
+    justify-content: flex-start;
+    color: #666;
+    font-size: 14px;
+    margin: 5px 15px;
+}
+.idpub div{
+    margin: 10px 10px;
+}
+
+.content {
+
+    border-radius: 5px;
+    margin: 15px auto;
+    width: 90%;
+}
+
+a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*Section demande*/
+.demande{
+    margin-top: 50px;
+    width: 40%;
+}
+
+
+/* Section commentaire */
+.cont{
+    margin: auto;
+    width: 50%;
+}
+#formComment {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    height: 50px;
+}
+.commentaire {
+    margin: 30px auto;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+}
+
+.commentaire form p {
+    margin: 5px 0;
+}
+
+.idcomment {
+    display: flex;
+    justify-content: flex-start;
+    color: #666;
+    font-size: 14px;
+    margin: 15px 5px;
+}
+.idcomment div{
+    margin: 10px 10px;
+}
+
+.revenir {
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    background-color: white;
+    width: 80px;
+    border-radius: 8px;
+}
+
+.revenir a{
+    text-align: center;
+    color: #1c1d8f;
+    font-weight: bold;
+}
+
+/*FOOTER*/ 
+.foot {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 2px;
+} 
+
+.foot ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.foot li {
+    position: relative;
+}
+
+.foot li a {
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+.foot li:hover > a {
+    background-color: #f38ea8;
+    color: white;
+}
+/*LISTE membre*/
+.membreListe {
+    border: 1px solid #ccc;
+    display: flex;
+    width: 60%;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+.ajouter-btn {
+    padding: 6px 12px;
+    background-color: #010111;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.annuler-btn {
+    padding: 6px 12px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.sary img{
+    width: 50px;
+    background-color: white;
+    border-radius: 50% 50%;
+}
+.ChampPub{
+    display: flex;
+}
