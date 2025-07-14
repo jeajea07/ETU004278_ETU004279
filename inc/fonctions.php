@@ -71,4 +71,11 @@
         return $resultf;
     }
 
+    function insert_image($id, $image){
+            $sql = "INSERT INTO images_objet(id_object, nom_images) VALUES ('%s', '%s')";
+            $sqlf = sprintf($sql,$id,$image);
+            //echo $sqlf;
+            $resultats = mysqli_query(bddconnect() , $sqlf);
+    }
+
 ?>

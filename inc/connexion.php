@@ -3,7 +3,7 @@
         static $connect = null;
 
         if ($connect === null) {
-            $connect = mysqli_connect('localhost', 'root', '', 'Objets');
+            $connect = mysqli_connect('localhost', 'ETU004279', 'TqzstuXv', 'db_s2_ETU004279');
 
             if (!$connect) {
                 // Arrête le script et affiche une erreur si la connexion échoue

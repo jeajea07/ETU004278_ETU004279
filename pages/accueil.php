@@ -34,7 +34,7 @@
         </div>
 
         <div class="mt-4 mb-4">
-            <a href="model.php?page=ajouter">Ajouter objet</a>
+            <a href="model.php?page=ajouter&">Ajouter objet</a>
         </div>
     </form>
 
