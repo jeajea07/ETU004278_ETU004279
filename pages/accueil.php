@@ -1,7 +1,7 @@
 <?php
     $listeObjets = getListeObjets();
     $listeCategorie=getCategorie();
-    var_dump($listeObjets);
+   
 
     if (isset($_GET['categorie'])) {
         $listeObjets = getObjetCategorie($_GET['categorie']);

@@ -11,7 +11,7 @@
             $mail = $_POST['mail'];
             $ville = $_POST['ville'];
             $genre= $_POST['genre'];
-            $image = 'assets/images/icones/profil.png';
+            $image = 'profil.png';
             $result = insert_user($nom, $dtn, $genre, $mail,$ville, $pass,$image);
             header("Location:../pages/index.php");
     }

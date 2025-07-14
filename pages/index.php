@@ -1,57 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/CSS/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connexion - Viby</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Ton style personnalisé -->
+  <link rel="stylesheet" href="../assets/CSS/style.css" />
 </head>
-<body>
-    <tbody>
-    <nav>
-        <div class="tete">
-            <div class="logo"><img src="../assets/images/logo.png" alt="Logo" width="60px"></div>
-            <div class="nom">Viby</div>
-        </div>
-    </nav>
+<body class="bg-light">
 
-    <div class="contenu">
-        <div class="formulaire">
-            <h1>Ha, te revoilà !</h1>
-            <p>Nous sommes si heureux de te revoir !</p>
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container d-flex align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="../assets/images/logo.png" alt="Logo" width="50" class="me-2" />
+        <span class="fs-4">Viby</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Contenu principal -->
+  <div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+      <!-- Formulaire -->
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h1 class="card-title text-center">Ha, te revoilà !</h1>
+            <p class="text-center">Nous sommes si heureux de te revoir !</p>
+
             <form action="../inc/verification.php" method="POST">
-                <p><input class = "champ" type="email" name="mail" placeholder="Entrer votre adresse mail" required></p>
-                <p><input class = "champ" type="password" name="pass" placeholder="Entrer votre mots de passe" required></p>
-                <span style="color:red; font-weight:bold; font-size:12px; text-align:center;">
-                    <?php
-                        if(isset($_GET['echec'])){
-                            echo 'Veuillez verifier votre mail ou mots de passe!';
-                        }
-                    ?>
-                </span>
-                <p><input id="connexion" type="submit" value="Connexion" required></p>
+              <div class="mb-3">
+                <input class="form-control" type="email" name="mail" placeholder="Entrer votre adresse mail" required />
+              </div>
+
+              <div class="mb-3">
+                <input class="form-control" type="password" name="pass" placeholder="Entrer votre mot de passe" required />
+              </div>
+
+              <?php if (isset($_GET['echec'])): ?>
+                <div class="text-danger text-center mb-3 fw-bold" style="font-size: 13px;">
+                  Veuillez vérifier votre mail ou mot de passe !
+                </div>
+              <?php endif; ?>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Connexion</button>
+              </div>
             </form>
-            <p>Besoin d'un compte? <a id="inscription" href="inscription.php" > S'inscrire</a></p>
-            
+
+            <p class="text-center mt-3">
+              Besoin d'un compte ?
+              <a href="model.php?page=inscription" class="text-decoration-none text-primary fw-semibold">S'inscrire</a>
+            </p>
+          </div>
         </div>
+      </div>
 
-        <div class="illustration">
-            <img src="../assets/images/illu.png" alt="Illustration">
-        </div>
     </div>
+  </div>
 
-    <div class="foot">
-            <ul>
-                <li><a href="inscription.php">S'inscrire</a></li>
-                <li><a href=".#">Télécharger Viby app</a></li>
-                <li><a href="#">Coockies</a></li>
-                <li><a href=".#">Aide</a></li>
-                <li><a href="#">Paramètre</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">&copy; 2025 Réseaux sociaux</a></li>
-            </ul>
+  <footer class="bg-dark text-white mt-5 py-3">
+    <div class="container text-center">
+      <ul class="list-inline mb-2">
+        <li class="list-inline-item"><a href="inscription.php" class="text-white text-decoration-none">S'inscrire</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Télécharger Viby app</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Cookies</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Aide</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Paramètre</a></li>
+        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">À propos</a></li>
+      </ul>
+      <small>&copy; 2025 Réseaux sociaux - Viby</small>
     </div>
+  </footer>
 
-    </tbody>
-    </body>
-    </html>
+</body>
+</html>

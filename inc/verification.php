@@ -9,7 +9,7 @@
         $sql = "SELECT * FROM membre WHERE mdp = '%s' AND email = '%s'";
         $sqlf = sprintf($sql, $pass, $mail);
         $resultats = mysqli_query($bdd , $sqlf);
-        //echo $sqlf;
+        echo $sqlf;
         $donnees = mysqli_fetch_assoc($resultats);
 
         if($donnees){

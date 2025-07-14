@@ -1,29 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Créer un compte</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Ton style personnalisé (optionnel) -->
-  <link rel="stylesheet" href="../assets/CSS/style.css">
-</head>
-
-<body class="bg-light">
-
-  <!-- Barre de navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="../assets/images/logo.png" alt="Logo" width="40" class="me-2">
-        <span>Viby</span>
-      </a>
-    </div>
-  </nav>
-
-  <!-- Contenu principal -->
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
@@ -74,23 +49,6 @@
     </div>
   </div>
 
-  <!-- Pied de page -->
-  <footer class="mt-5 bg-dark text-white py-3">
-    <div class="container text-center">
-      <ul class="list-inline mb-2">
-        <li class="list-inline-item"><a class="text-white text-decoration-none" href="inscription.php">S'inscrire</a></li>
-        <li class="list-inline-item"><a class="text-white text-decoration-none" href="#">Télécharger l'app</a></li>
-        <li class="list-inline-item"><a class="text-white text-decoration-none" href="#">Cookies</a></li>
-        <li class="list-inline-item"><a class="text-white text-decoration-none" href="#">Aide</a></li>
-        <li class="list-inline-item"><a class="text-white text-decoration-none" href="#">Paramètre</a></li>
-        <li class="list-inline-item"><a class="text-white text-decoration-none" href="#">À propos</a></li>
-      </ul>
-      <small>&copy; 2025 Réseaux sociaux - Viby</small>
-    </div>
-  </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
-</html>
+
