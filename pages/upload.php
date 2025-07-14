@@ -3,6 +3,8 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+session_start();
+require('../inc/fonctions.php');
 
 if(isset($_POST['categorie']) && isset($_POST['nom'])){
     $mail = $_SESSION['mail'];

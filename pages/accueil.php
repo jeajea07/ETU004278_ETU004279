@@ -45,35 +45,31 @@
         <div class="card-header bg-dark text-white">
             <strong>Résultats</strong>
         </div>
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered mb-0 align-middle text-center">
-                <thead class="table-light">
-                    <tr>
-                        <th>Nom</th>
-                        <th>Objets</th>
-                        <th>Catégories</th>
-                        <th>Membres</th>
-                        <th>Date de retour</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if (!empty($listeObjets)) : ?>
-                        <?php foreach ($listeObjets as $objet) { ?>
-                            <tr>
-                                <td><?= $objet['nom_objet'] ?></td>
-                                <td><?= $objet['nom_categorie']?></td>
-                                <td><?= $objet['nom_membre'] ?></td>
-                                <td><?= $objet['date_retour']?></td>
-                            </tr>
-                        <?php } ?>
-                    <?php else : ?>
-                        <tr>
-                            <td colspan="3" class="text-muted">Aucun résultat trouvé</td>
-                        </tr>
-                    <?php endif; ?>
-                </tbody>
-            </table>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+            <?php if (!empty($listeObjets)) : ?>
+                <?php foreach ($listeObjets as $objet) { ?>
+                    <div class="col">
+                        <div class="card h-100 shadow-sm">
+                            <img src="assets/images/<?= htmlspecialchars($objet['nom_image']) ?>" 
+                                class="card-img-top object-fit-cover" 
+                                alt="<?= htmlspecialchars($objet['nom_image']) ?>" 
+                                style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= htmlspecialchars($objet['nom_objet']) ?></h5>
+                                <p class="card-text mb-1"><strong>Catégorie :</strong> <?= htmlspecialchars($objet['nom_categorie']) ?></p>
+                                <p class="card-text mb-1"><strong>Propriétaire :</strong> <?= htmlspecialchars($objet['nom_membre']) ?></p>
+                                <p class="card-text"><strong>Retour :</strong> <?= htmlspecialchars($objet['date_retour']) ?></p>
+                                <a href="#" class="btn btn-outline-success btn-sm mt-2">Emprunter</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            <?php else : ?>
+                <div class="col-12 text-center text-muted">
+                    Aucun résultat trouvé.
+                </div>
+            <?php endif; ?>
+        </div>
         </div>
     </div>
 </main>

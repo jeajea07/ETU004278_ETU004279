@@ -22,7 +22,6 @@ if (isset($_GET['mail']) && isset($_GET['id'])) {
         </div>
     </div>
 
-    <!-- Table des objets -->
     <div class="card shadow-sm">
         <div class="card-body">
             <h5 class="card-title mb-3">Objets du membre</h5>

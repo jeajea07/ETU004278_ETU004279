@@ -40,7 +40,7 @@
     }
 
     function getObjetCategorie($id){
-        $sql="SELECT * FROM v_objets_categories WHERE id_categorie = '%s'";
+        $sql="SELECT * FROM v_objets_categories WHERE id_membre = '%s'";
         $sqlf = sprintf($sql, $id);
         $variable= mysqli_query(bddconnect(),$sql);
         //var_dump($variable);

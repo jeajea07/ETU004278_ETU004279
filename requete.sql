@@ -55,6 +55,12 @@ SELECT
     o.nom_objet,
     c.id_categorie,
     c.nom_categorie,
+    (
+        SELECT nom_image 
+        FROM images_objet i 
+        WHERE i.id_objet = o.id_objet 
+        LIMIT 1
+    ) AS nom_image,
     e.id_emprunt,
     e.date_emprunt,
     e.date_retour,
@@ -62,8 +68,8 @@ SELECT
     m.nom AS nom_membre
 FROM objet o
 JOIN categorie_objet c ON c.id_categorie = o.id_categorie
-JOIN emprunt e ON o.id_objet = e.id_objet
-JOIN membre m ON e.id_membre = m.id_membre;
+LEFT JOIN emprunt e ON o.id_objet = e.id_objet
+LEFT JOIN membre m ON e.id_membre = m.id_membre;
 
 
 CREATE OR REPLACE VIEW v_objets_categories AS
