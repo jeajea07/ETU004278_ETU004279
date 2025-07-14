@@ -1,10 +1,10 @@
 <?php
     $listeObjets = getListeObjets();
     $listeCategorie=getCategorie();
-   
+    var_dump($listeObjets);
 
-    if (isset($_GET['categorie'])) {
-        $listeObjets = getObjetCategorie($_GET['categorie']);
+    if (isset($_GET['categorie']) && isset($_GET['nom'])) {
+        $listeObjets = recherche($_GET['categorie'], $_GET['nom']);
     } 
 ?>
 <main>
@@ -22,10 +22,19 @@
             </select>
         </div>
 
+        <div class="col-md-3">
+            <label for="nom" class="form-label">Nom de l'objet</label>
+            <input type="text" id="nom" class="form-control" name="nom" placeholder="Nom">
+        </div>
+
         <div class="col-md-2 d-flex align-items-end">
             <button type="submit" class="btn btn-primary w-100">
                 <i class="bi bi-search me-1"></i> Rechercher
             </button>
+        </div>
+
+        <div class="mt-4 mb-4">
+            <a href="model.php?page=ajouter">Ajouter objet</a>
         </div>
     </form>
 
@@ -38,10 +47,12 @@
             <table class="table table-striped table-bordered mb-0 align-middle text-center">
                 <thead class="table-light">
                     <tr>
+                        <th>Nom</th>
                         <th>Objets</th>
                         <th>Catégories</th>
                         <th>Membres</th>
                         <th>Date de retour</th>
+                        
                     </tr>
                 </thead>
                 <tbody>

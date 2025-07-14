@@ -17,7 +17,6 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/CSS/style.css">
     
     <title>Site Immobilier</title>
 </head>
@@ -44,9 +43,12 @@
                     </ul>
                 </div>
 
-                <div class="ms-3 d-none d-lg-block">
-                    <a href="pages/profil.php?mail=".$membreActuel['idmembre']><img src="assets/images/<?php echo $membreActuel['image_profil']?>" alt="profil" class="rounded-circle" width="40" height="40"></a>
+               <div class="ms-3 d-none d-lg-block">
+                    <a href="model.php?page=profil&mail=<?= $membreActuel['email'] ?>&id=<?= $membreActuel['id_membre'] ?>">
+                        <img src="assets/images/<?= $membreActuel['image_profil'] ?>" alt="profil" class="rounded-circle" width="40" height="40">
+                    </a>
                 </div>
+
 
             </div>
         </nav>

@@ -40,9 +40,9 @@
     }
 
     function getObjetCategorie($id){
-        $sql="SELECT * FROM v_liste_objets WHERE id_categorie = '%s'";
-        $sqlf=sprintf($sql, $id);
-        $variable= mysqli_query(bddconnect(),$sqlf);
+        $sql="SELECT * FROM v_objets_categories WHERE id_categorie = '%s'";
+        $sqlf = sprintf($sql, $id);
+        $variable= mysqli_query(bddconnect(),$sql);
         //var_dump($variable);
         $result=array();
         while ($demande = mysqli_fetch_assoc($variable)) {
@@ -50,6 +50,25 @@
         }
     
         return $result;
+    }
+
+    function recherche($id, $nom){
+        $sql="SELECT * FROM v_liste_objets WHERE 1=1";
+        if (!empty($id)) {
+            $nom = mysqli_real_escape_string(bddconnect(), $id);
+            $sql .= " AND id_objet = $id";
+        }
+        if (!empty($nom)) {
+            $nom = mysqli_real_escape_string(bddconnect(), $nom);
+            $sql .= " AND (nom_objet LIKE '%$nom%')";
+        }
+
+        $result = mysqli_query(bddconnect(), $sql);
+        $resultf = array();
+        while ($employee = mysqli_fetch_assoc($result)) {
+            $resultf[] = $employee;
+        }
+        return $resultf;
     }
 
 ?>

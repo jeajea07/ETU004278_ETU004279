@@ -17,7 +17,7 @@
             header("Location: ../model.php?page=accueil");
         }
         else{
-            header("Location: ../model.php?page=index&echec=1");
+            header("Location:../pages/index.php?echec=1");
         }
     }
 ?>

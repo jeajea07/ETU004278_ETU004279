@@ -65,8 +65,15 @@ JOIN categorie_objet c ON c.id_categorie = o.id_categorie
 JOIN emprunt e ON o.id_objet = e.id_objet
 JOIN membre m ON e.id_membre = m.id_membre;
 
-INSERT INTO membre (nom, date_naissance, genre, email, ville, mdp, image_profil) VALUES
-('Alice', '1990-05-15', 'F', 'alice@example.com', 'Paris', 'mdp123', 'profil.png'),
-('Bob', '1985-08-22', 'H', 'bob@example.com', 'Lyon', 'mdp456', 'profil.png'),
-('Chloe', '1992-12-01', 'F', 'chloe@example.com', 'Marseille', 'mdp789', 'profil.png'),
-('David', '1988-03-10', 'H', 'david@example.com', 'Toulouse', 'mdp321', 'profil.png');
+
+CREATE OR REPLACE VIEW v_objets_categories AS
+SELECT 
+    o.id_objet,
+    o.nom_objet,
+    c.id_categorie,
+    c.nom_categorie,
+    o.id_membre
+FROM objet o
+JOIN categorie_objet c ON o.id_categorie = c.id_categorie
+GROUP BY c.nom_categorie;
+

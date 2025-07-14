@@ -1,4 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Créer un compte</title>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+
+<body class="bg-light">
+
+  <!-- Barre de navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
@@ -61,6 +75,8 @@
 
   <!-- Pied de page -->
   <footer class="mt-5 bg-dark text-white py-3">
+  1
+  
     <div class="container text-center">
       <ul class="list-inline mb-2">
         <li class="list-inline-item"><a class="text-white text-decoration-none" href="inscription.php">S'inscrire</a></li>
@@ -74,4 +90,8 @@
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+</body>
+</html>
