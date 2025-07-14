@@ -46,3 +46,22 @@ CREATE TABLE emprunt (
     FOREIGN KEY (id_objet) REFERENCES objet(id_objet),
     FOREIGN KEY (id_membre) REFERENCES membre(id_membre) 
 );
+
+
+/*OBJETS*/
+CREATE OR REPLACE VIEW v_liste_objets AS
+SELECT 
+    o.id_objet,
+    o.nom_objet,
+    c.id_categorie,
+    c.nom_categorie,
+    e.id_emprunt,
+    e.date_emprunt,
+    e.date_retour,
+    m.id_membre,
+    m.nom AS nom_membre
+FROM objet o
+JOIN categorie_objet c ON c.id_categorie = o.id_categorie
+JOIN emprunt e ON o.id_objet = e.id_objet
+JOIN membre m ON e.id_membre = m.id_membre;
+

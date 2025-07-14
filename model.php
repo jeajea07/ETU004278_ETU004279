@@ -1,6 +1,14 @@
+<?php
+    session_start();
+    require('inc/fonctions.php');
+
+    $mail = $_SESSION['mail'];
+    $membreActuel = getMembre($mail);
+    //var_dump( $membreActuel);
+     //echo $membreActuel['image_profil'];
+?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,13 +58,19 @@
             </ul>
         </div>
         </div>
+        <div class="mem">
+            <p>
+
+                <img src=" <?php echo $membre['image_profil']?>" alt="">
+               
+            </p>
+        </div>
     </nav>
 </header>
   
 
     <?php
-        session_start();
-        require('inc/fonctions.php');
+        
         ini_set("display_errors", "1");
         error_reporting(E_ALL);
         if(isset($_GET['page'])){
