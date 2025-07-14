@@ -58,7 +58,7 @@
                                 <h5 class="card-title"><?= htmlspecialchars($objet['nom_objet']) ?></h5>
                                 <p class="card-text mb-1"><strong>Catégorie :</strong> <?= htmlspecialchars($objet['nom_categorie']) ?></p>
                                 <p class="card-text mb-1"><strong>Propriétaire :</strong> <?= htmlspecialchars($objet['nom_membre']) ?></p>
-                                <p class="card-text"><strong>Retour :</strong> <?= htmlspecialchars($objet['date_retour']) ?></p>
+                                <p class="card-text"><strong>Disponible le :</strong> <?= htmlspecialchars($objet['date_retour']) ?></p>
                                 <a href="#" class="btn btn-outline-success btn-sm mt-2">Emprunter</a>
                             </div>
                         </div>
