@@ -1,7 +1,6 @@
 <?php
     $listeObjets = getListeObjets();
     $listeCategorie=getCategorie();
-    var_dump($listeObjets);
 
     if (isset($_GET['categorie']) && isset($_GET['nom'])) {
         $listeObjets = recherche($_GET['categorie'], $_GET['nom']);
@@ -34,8 +33,11 @@
         </div>
 
         <div class="mt-4 mb-4">
-            <a href="model.php?page=ajouter&">Ajouter objet</a>
+            <a href="model.php?page=ajouter" class="btn btn-primary">
+                <i class="bi bi-plus-circle me-1"></i> Ajouter un objet
+            </a>
         </div>
+
     </form>
 
     </div>

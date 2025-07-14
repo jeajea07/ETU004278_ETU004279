@@ -4,7 +4,13 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require('../inc/fonctions.php');
+if(isset($_POST['categorie']) && isset($_POST['nom'])){
+    $mail = $_SESSION['mail'];
+    $nom = $_POST['nom'];
+    $categorie = $_POST['categorie'];
+    $membre = getMembreid($mail);
+}
+
 $uploadDir = __DIR__ . '/../assets/images/';
 $maxSize = 2 * 1024 * 1024; // 2 Mo 
 $allowedMimeTypes = ['image/jpeg', 'image/png', 'image/jpg']; 
@@ -36,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['fichier'])) {
     if (move_uploaded_file($file['tmp_name'], $uploadDir . $newName)) { 
         $id = count(getListeObjets()) + 1;
         insert_image($id, $newName);
+        insert_objet($id, $nom, $categorie, $membre);
         header('Location:../model.php?page=accueil');
         
     } else { 

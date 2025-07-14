@@ -78,4 +78,19 @@
             $resultats = mysqli_query(bddconnect() , $sqlf);
     }
 
+    function insert_objet($id, $nom, $categorie, $membre){
+            $sql = "INSERT INTO objet(id_objet , nom_objet , id_categorie, id_membre) VALUES ('%s', '%s', '%s','%s')";
+            $sqlf = sprintf($sql,$id, $nom, $categorie, $membre);
+            //echo $sqlf;
+            $resultats = mysqli_query(bddconnect() , $sqlf);
+    }
+
+    function getMembreid($mail){
+        $sql = "SELECT id_membre FROM membre WHERE mail = '%s'";
+        $sqlf = sprintf($sql,$mail);;
+        $resultat = mysqli_query(bddconnect() , $sqlf);
+        $resultf = mysqli_fetch_assoc($resultat);
+        return $resultf; 
+    }
+
 ?>
